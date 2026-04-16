@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kubasik - Jolanta</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #111;
+            font-family: Arial, sans-serif;
+        }
+
+        .square {
+            width: 400px;
+            height: 400px;
+            background: white;
+            border: 2px solid #333;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            padding: 40px 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .square h1 {
+            margin: 0 0 20px 0;
+            color: #333;
+        }
+
+        .square label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .square input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+
+        .square button {
+            padding: 10px 30px;
+            font-size: 16px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .square button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="square">
+        <h1>JOLANTA</h1>
+        
+        <label>Age</label>
+        <input type="text" name="age" placeholder="Enter age">
+        
+        <label>ID</label>
+        <input type="text" name="id" placeholder="Enter id">
+        
+        <button type="submit">OK</button>
+    </div>
+
+</body>
+</html>
