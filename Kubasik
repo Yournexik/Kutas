@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<?php
+$polaczenie = mysqli_connect("localhost", "root", "", "xdxd");
+
+$sql = "SELECT * FROM users";
+
+$wynik = mysqli_query($polaczenie, $sql);
+
+while($wiersz = mysqli_fetch_assoc($wynik)){
+    $imie = $wiersz['imie'];
+    echo "<h2>$imie</h2>";
+}
+?>
+
+<form action="adduser.php" method="POST">
+    <label for="imie">Podaj imię</label>
+    <input type="text" name="imie" id="imie">
+
+    <label for="wiek">Podaj wiek</label>
+    <input type="number" name="wiek" id="wiek">
+
+    <label for="zgoda">Wyrażasz zgodę?</label>
+    <input type="checkbox" name="zgoda" id="zgoda">
+
+    <button>Dodaj użytkownika</button>
+</form>
+
+</body>
+</html>
